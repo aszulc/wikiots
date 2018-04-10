@@ -1,4 +1,4 @@
-# WikiOTS
+## WikiOTS
 Wiki for OTS
 
 ## Built with:
