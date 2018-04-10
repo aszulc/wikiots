@@ -11,4 +11,4 @@ Wiki for OTS
 - [CSS](https://www.w3.org/Style/CSS/) ([Sass](https://sass-lang.com/))
 - [JavaScript](https://www.javascript.com/) ([TypeScript](https://www.typescriptlang.org/), [jQuery](https://jquery.com/))<br /><br />
   
-:+1: Wish me luck!
+:+1: *Wish me luck!*
