@@ -3,7 +3,7 @@ Wiki for OTS
 
 ## Built with:
 
-- [PHP](http://www.php.net/) ([Symfony](https://symfony.com/))
+- [PHP](http://www.php.net/) ([Symfony](https://symfony.com/), [Composer](https://getcomposer.org/))
 - [phpDoc](https://www.phpdoc.org/)
 - [MySQL](https://www.mysql.com/)<br /><br />
 
