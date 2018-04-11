@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Symfony Standard Edition
 ========================
 
@@ -75,3 +76,19 @@ Enjoy!
 [13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
 [14]: https://symfony.com/doc/current/setup/built_in_web_server.html
 [15]: https://symfony.com/doc/current/setup.html
+=======
+## WikiOTS
+Wiki for OTS
+
+## Built with:
+
+- [PHP](http://www.php.net/) ([Symfony](https://symfony.com/))
+- [phpDoc](https://www.phpdoc.org/)
+- [MySQL](https://www.mysql.com/)<br /><br />
+
+- [HTML](https://www.w3.org/html/)
+- [CSS](https://www.w3.org/Style/CSS/) ([Sass](https://sass-lang.com/))
+- [JavaScript](https://www.javascript.com/) ([TypeScript](https://www.typescriptlang.org/), [jQuery](https://jquery.com/))<br /><br />
+  
+:+1: *Wish me luck!*
+>>>>>>> f111b982cc2fcb45dae5b557fe8d9301e1b4da77
