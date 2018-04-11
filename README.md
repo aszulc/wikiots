@@ -9,6 +9,4 @@ Wiki for OTS
 
 - [HTML](https://www.w3.org/html/)
 - [CSS](https://www.w3.org/Style/CSS/) ([Sass](https://sass-lang.com/))
-- [JavaScript](https://www.javascript.com/) ([TypeScript](https://www.typescriptlang.org/), [jQuery](https://jquery.com/))<br /><br />
-  
-:+1: *Wish me luck!*
+- [JavaScript](https://www.javascript.com/) ([TypeScript](https://www.typescriptlang.org/), [jQuery](https://jquery.com/))
