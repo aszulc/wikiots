@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8"/>
+    <title>
+        {% block title %}
+            WikiOTS
+            {% if ots is defined %}
+                &raquo; {{ ots }}
+            {% endif %}
+        {% endblock %}
+    </title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+<body>
+<header id="site-header">
+    <div class="center">
+        <div id="site-logo">
+            {% block logo %}
+                <div id="main-logo">
+                    Logo
+                </div>
+                {% if ots is defined %}
+                    <div id="ots-logo">
+                        {{ ots }}
+                    </div>
+                {% endif %}
+            {% endblock %}
+        </div>
+        <nav id="site-menu">
+            {% block menu %}
+                <ul>
+                    {% for page in pages %}
+                        <li><a href="/">{{ page }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endblock %}
+        </nav>
+    </div>
+</header>
+
+<div id="site-content">
+    {% block body %}{% endblock %}
+</div>
+<footer id="site-footer">
+    Footer
+</footer>
+{% block javascripts %}{% endblock %}
+</body>
 </html>
