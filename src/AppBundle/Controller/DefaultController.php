@@ -13,7 +13,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         return $this->render('main/index.html.twig', [
-            'pages' => ['Home', 'List', 'Create'],
+            'pages' => ['List', 'Create'],
         ]);
     }
 }

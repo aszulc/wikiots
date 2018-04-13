@@ -17,8 +17,13 @@ class OtsController extends Controller
         }
 
         return $this->render('ots/index.html.twig', [
-            'pages' => ['Home', 'Items', 'Quests', 'Monsters', 'Spells'],
-            'ots' => $ots,
+            'pages' => [
+                'Items' => ['Axe', 'Sword', 'Club'],
+                'Quests',
+                'Monsters',
+                'Spells',
+            ],
+            'ots'   => $ots,
         ]);
     }
 }

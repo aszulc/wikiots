@@ -1,0 +1,29 @@
+body {
+    background-color: #ffffe6;
+}
+
+.site-logo-letter-o {
+    color: red;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.site-logo-letter-t {
+    color: yellow;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.site-logo-letter-s {
+    color: blue;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.link-no-decoration {
+    text-decoration: none;
+}
+
+.w3-font-roboto {
+    font-family: 'Roboto', sans-serif;
+}

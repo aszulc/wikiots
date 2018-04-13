@@ -10,42 +10,61 @@
             {% endif %}
         {% endblock %}
     </title>
-    {% block stylesheets %}{% endblock %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/template.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('css/w3.css') }}"/>
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto'>
+    {% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
 </head>
-<body>
+<body class="w3-font-roboto">
 <header id="site-header">
-    <div class="center">
-        <div id="site-logo">
-            {% block logo %}
-                <div id="main-logo">
-                    Logo
-                </div>
-                {% if ots is defined %}
-                    <div id="ots-logo">
-                        {{ ots }}
-                    </div>
-                {% endif %}
-            {% endblock %}
-        </div>
-        <nav id="site-menu">
-            {% block menu %}
-                <ul>
-                    {% for page in pages %}
-                        <li><a href="/">{{ page }}</a></li>
+    <div class="w3-top">
+        <div id="site-menu" class="w3-bar w3-dark-grey w3-card">
+            <div class="w3-bar-item w3-hide-small w3-padding-small" id="site-logo">
+                {% block logo %}
+                    {% if ots is defined %}
+                        <a href="/{{ ots }}" class="link-no-decoration">{{ ots }}</a>
+                    {% else %}
+                        Wiki<span class="site-logo-letter-o">O</span><span class="site-logo-letter-t">T</span><span
+                            class="site-logo-letter-s">S</span>
+                    {% endif %}
+                {% endblock %}
+            </div>
+            <div id="site-menu" class="w3-right w3-hide-small">
+                {% block menu %}
+                    {% if ots is defined %}
+                        <a href="/" class="w3-bar-item w3-padding-small w3-hide-small link-no-decoration">
+                        Wiki<span class="site-logo-letter-o">O</span><span class="site-logo-letter-t">T</span><span
+                            class="site-logo-letter-s">S</span>
+                    {% endif %}
+                    </a>
+                    {% for page_key, page in pages %}
+                        {% if page is iterable %}
+                            <div class="w3-dropdown-hover w3-hide-small">
+                                <button class="w3-padding-large w3-button" title="More">{{ page_key }} <i
+                                            class="fa fa-caret-down"></i></button>
+                                <div class="w3-dropdown-content w3-bar-block w3-card-{{ page|length }}">
+                                    {% for subpage_key, subpage in page %}
+                                        <a href="#" class="w3-bar-item w3-button">{{ subpage }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% else %}
+                            <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">{{ page }}</a>
+                        {% endif %}
                     {% endfor %}
-                </ul>
-            {% endblock %}
-        </nav>
+                {% endblock %}
+            </div>
+        </div>
     </div>
 </header>
+<div id="site-content" style="margin-top: 46.5px;">
+    {% block body %}
 
-<div id="site-content">
-    {% block body %}{% endblock %}
+    {% endblock %}
 </div>
-<footer id="site-footer">
-    Footer
-</footer>
+<footer id="site-footer"></footer>
 {% block javascripts %}{% endblock %}
 </body>
 </html>
