@@ -5,9 +5,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="page")
+ * @ORM\Table(name="subpage")
  */
-class Page
+class Subpage
 {
     /**
      * @var int
@@ -17,6 +17,12 @@ class Page
      * @ORM\Column(type="integer")
      */
     private $id;
+    /**
+     * @var int
+     *
+     * @ORM\Column(type="integer")
+     */
+    private $pageId;
     /**
      * @var string
      *
